@@ -19,12 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="day 3 complete">
-      <change afterPath="$PROJECT_DIR$/day04/4_invalid.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/4_valid.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/day04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04/test.txt" afterDir="false" />
+    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="day 4 complete">
+      <change afterPath="$PROJECT_DIR$/day05/day05.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/test1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day05/test2..txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +45,14 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day05" />
   </component>
-  <component name="RunManager" selected="Python.day04">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Frank\eclipse-workspaces\aoc2020\day05" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.day05">
     <configuration name="day03" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aoc2020" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,8 +95,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="day05" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="aoc2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day05" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day05/day05.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.day05" />
         <item itemvalue="Python.day04" />
         <item itemvalue="Python.day03" />
       </list>
@@ -127,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606991064282</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="day 4 complete">
+      <created>1607111358767</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607111358767</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -148,28 +182,33 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="day 3 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 3 complete" />
+    <MESSAGE value="day 4 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 4 complete" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1362" height="81" key="GridCell.Tab.0.bottom" timestamp="1607111138336">
+    <state width="1362" height="317" key="GridCell.Tab.0.bottom" timestamp="1607186612492">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="81" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607111138336" />
-    <state width="1362" height="81" key="GridCell.Tab.0.center" timestamp="1607111138336">
+    <state width="1362" height="317" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607186612492" />
+    <state width="1362" height="317" key="GridCell.Tab.0.center" timestamp="1607186612492">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="81" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607111138336" />
-    <state width="1362" height="81" key="GridCell.Tab.0.left" timestamp="1607111138336">
+    <state width="1362" height="317" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607186612492" />
+    <state width="1362" height="317" key="GridCell.Tab.0.left" timestamp="1607186612491">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="81" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607111138336" />
-    <state width="1362" height="81" key="GridCell.Tab.0.right" timestamp="1607111138336">
+    <state width="1362" height="317" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607186612491" />
+    <state width="1362" height="317" key="GridCell.Tab.0.right" timestamp="1607186612492">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="81" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607111138336" />
+    <state width="1362" height="317" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607186612492" />
     <state x="837" y="315" key="RollbackChangesDialog" timestamp="1606990864865">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="837" y="315" key="RollbackChangesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1606990864865" />
+    <state x="680" y="363" key="Vcs.Push.Dialog.v2" timestamp="1607111375640">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="680" y="363" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1607111375640" />
   </component>
 </project>
