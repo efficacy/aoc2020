@@ -1,12 +1,11 @@
 
 def count_group(group, qpart):
-    matched = set()
     if qpart == 1:
+        matched = set()
         for entry in group:
-            for c in entry:
-                matched.update(c)
+            matched = matched.union(set(list(entry)))
     else:
-        matched.update(set(list("abcdefghijklmnopqrstuvwxyz")))
+        matched = set(list("abcdefghijklmnopqrstuvwxyz"))
         for entry in group:
             matched = matched.intersection(set(list(entry)))
 
