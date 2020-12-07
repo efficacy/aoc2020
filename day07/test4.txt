@@ -1,0 +1,3 @@
+shiny gold bags contain 1 dark olive bag.
+dark olive bags contain 2 vibrant plum bags.
+vibrant plum bags contain no other bags.
