@@ -7,6 +7,12 @@ class Cpu:
             "jmp": self.jmp,
             "hlt": self.hlt
         }
+        self.reset()
+
+    def reset(self):
+        self.accumulator = 0
+        self.programcounter = 0
+        self.seen = set()
 
     def status(self):
         return "[ac=" + str(self.accumulator)+" pc=" + str(self.programcounter)+"]"
@@ -28,30 +34,14 @@ class Cpu:
         # print(" hlt " + str(offset) + self.status())
         raise Exception("Halt ac="+str(self.accumulator)+" pc="+str(self.programcounter))
 
-
     def execute(self, instruction):
         cmd, arg = instruction
-        print("exec " + cmd + "(",arg,") "+self.status())
+        # print("exec " + cmd + "(",arg,") "+self.status())
         op = self.microcode.get(cmd, None)
         if op != None:
             op(arg)
             return
         print("Invalid opcode: ",cmd)
-
-    def run(self, script):
-        bottom = 0
-        top = len(script)
-        seen = set() # to catch infiniite loops
-
-        self.accumulator = 0
-        self.programcounter = 0
-        while self.programcounter >= bottom and self.programcounter < top:
-            seen.add(self.programcounter)
-            instruction = script[self.programcounter]
-            self.execute(instruction)
-            if self.programcounter in seen:
-                raise Exception("Hit a loop! " + self.status())
-        raise Exception("Segfault! " + self.status()+" top="+str(top))
 
 def value(arg):
     sign = arg[0]
@@ -59,6 +49,19 @@ def value(arg):
     if sign == "-":
         n = -n
     return n
+
+def run(script, cpu):
+    cpu.reset()
+    while True:
+        cpu.seen.add(cpu.programcounter)
+        instruction = script[cpu.programcounter]
+        cpu.execute(instruction)
+        if cpu.programcounter in cpu.seen:
+            raise Exception("Hit a loop! " + cpu.status())
+        if cpu.programcounter < 0 or cpu.programcounter > len(script):
+            raise Exception("Segfault! " + cpu.status())
+        if (cpu.programcounter == len(script)):
+            return cpu
 
 def solve(qpart, filename='input.txt'):
     print("Part " + str(qpart))
@@ -70,11 +73,36 @@ def solve(qpart, filename='input.txt'):
         script.append((cmd,value(arg)))
 
     cpu = Cpu()
-    try:
-        ret = cpu.run(script)
-    except Exception as error:
-        print(str(error))
+    if qpart == 1:
+        try:
+            ret = run(script, cpu)
+        except Exception as error:
+            print(str(error))
+    else:
+        for i in range(0,len(script)):
+            cmd,arg = script[i]
+            if cmd == "nop":
+                print("replacing nop at ",i)
+                script2 = script.copy()
+                script2[i] = ("jmp",arg)
+                try:
+                    run(script2, cpu)
+                    print("found a working versin by changing instruction " + str(i) + " to jmp, ac=" + str(cpu.accumulator))
+                    return
+                except Exception as error:
+                    print(str(error))
+            elif cmd == "jmp":
+                print("replacing jmp at ",i)
+                script2 = script.copy()
+                script2[i] = ("nop", arg)
+                try:
+                    run(script2, cpu)
+                    print("found a working versin by changing instruction " + str(i) + " to nop, ac=" + str(cpu.accumulator))
+                    return
+                except Exception as error:
+                    print(str(error))
+    print("tried all of them :(")
 
 if __name__ == '__main__':
-    solve(1)
-    # solve(2)
+    # solve(1)
+    solve(2)
