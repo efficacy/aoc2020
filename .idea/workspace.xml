@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="day 8 part 1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="day 8 part 1 (self-modifying version)">
       <change beforePath="$PROJECT_DIR$/day08/day08.py" beforeDir="false" afterPath="$PROJECT_DIR$/day08/day08.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607426784374</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="day 8 part 1 (self-modifying version)">
+      <created>1607428034801</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607428034801</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -264,29 +270,30 @@
     <MESSAGE value="minor day 6 refactoring" />
     <MESSAGE value="day 7 complete" />
     <MESSAGE value="day 8 part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 8 part 1" />
+    <MESSAGE value="day 8 part 1 (self-modifying version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 8 part 1 (self-modifying version)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="870" y="372" key="FileChooserDialogImpl" timestamp="1607262141256">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="870" y="372" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1607262141256" />
-    <state width="1362" height="351" key="GridCell.Tab.0.bottom" timestamp="1607427873184">
+    <state width="1362" height="278" key="GridCell.Tab.0.bottom" timestamp="1607428465606">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607427873184" />
-    <state width="1362" height="351" key="GridCell.Tab.0.center" timestamp="1607427873184">
+    <state width="1362" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607428465606" />
+    <state width="1362" height="278" key="GridCell.Tab.0.center" timestamp="1607428465605">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="351" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607427873184" />
-    <state width="1362" height="351" key="GridCell.Tab.0.left" timestamp="1607427873184">
+    <state width="1362" height="278" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607428465605" />
+    <state width="1362" height="278" key="GridCell.Tab.0.left" timestamp="1607428465605">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="351" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607427873184" />
-    <state width="1362" height="351" key="GridCell.Tab.0.right" timestamp="1607427873184">
+    <state width="1362" height="278" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607428465605" />
+    <state width="1362" height="278" key="GridCell.Tab.0.right" timestamp="1607428465606">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="351" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607427873184" />
+    <state width="1362" height="278" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607428465606" />
     <state x="837" y="315" key="RollbackChangesDialog" timestamp="1607426770701">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -295,5 +302,9 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="680" y="363" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1607337925893" />
+    <state x="483" y="229" width="1200" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607428487942">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="483" y="229" width="1200" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1607428487942" />
   </component>
 </project>

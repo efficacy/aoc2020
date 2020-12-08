@@ -41,14 +41,17 @@ class Cpu:
     def run(self, script):
         bottom = 0
         top = len(script)
+        seen = set() # to catch infiniite loops
 
         self.accumulator = 0
         self.programcounter = 0
         while self.programcounter >= bottom and self.programcounter < top:
+            seen.add(self.programcounter)
             instruction = script[self.programcounter]
-            script[self.programcounter] = ("hlt",0) # halt if we come by here again
             self.execute(instruction)
-        raise Exception("Segfault ac="+str(self.accumulator)+" pc="+str(self.programcounter)+" top="+str(top))
+            if self.programcounter in seen:
+                raise Exception("Hit a loop! " + self.status())
+        raise Exception("Segfault! " + self.status()+" top="+str(top))
 
 def value(arg):
     sign = arg[0]
@@ -70,7 +73,7 @@ def solve(qpart, filename='input.txt'):
     try:
         ret = cpu.run(script)
     except Exception as error:
-        print("terminated(",str(error),"). final acc value is: ", cpu.accumulator)
+        print(str(error))
 
 if __name__ == '__main__':
     solve(1)
