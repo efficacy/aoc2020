@@ -1,28 +1,37 @@
+
 class Cpu:
     def __init__(self):
         self.microcode = {
             "nop": self.nop,
             "acc": self.acc,
-            "jmp": self.jmp
+            "jmp": self.jmp,
+            "hlt": self.hlt
         }
 
-    def nop(self, _):
+    def status(self):
+        return "[ac=" + str(self.accumulator)+" pc=" + str(self.programcounter)+"]"
+
+    def nop(self, offset):
+        # print(" nop "+str(offset)+self.status())
         self.programcounter += 1
 
     def acc(self, offset):
-        print(" acc offset=",offset," starting ac=",self.accumulator)
+        # print(" acc "+str(offset)+self.status())
         self.accumulator += offset
         self.programcounter += 1
-        print(" new ac=",self.accumulator)
 
     def jmp(self, offset):
-        print(" jmp offset=",offset," starting pc=",self.programcounter)
+        # print(" jmp "+str(offset)+self.status())
         self.programcounter = self.programcounter + offset
-        print(" new pc=",self.programcounter)
+
+    def hlt(self, offset):
+        # print(" hlt " + str(offset) + self.status())
+        raise Exception("Halt ac="+str(self.accumulator)+" pc="+str(self.programcounter))
+
 
     def execute(self, instruction):
         cmd, arg = instruction
-        print("exec ",cmd,"(",arg,") ac=",self.accumulator," pc=",self.programcounter)
+        print("exec " + cmd + "(",arg,") "+self.status())
         op = self.microcode.get(cmd, None)
         if op != None:
             op(arg)
@@ -32,18 +41,14 @@ class Cpu:
     def run(self, script):
         bottom = 0
         top = len(script)
-        seen = set() # to catch infiniite loops
 
         self.accumulator = 0
         self.programcounter = 0
         while self.programcounter >= bottom and self.programcounter < top:
-            seen.add(self.programcounter)
             instruction = script[self.programcounter]
+            script[self.programcounter] = ("hlt",0) # halt if we come by here again
             self.execute(instruction)
-            if self.programcounter in seen:
-                print("Hit a loop!")
-                return
-        print("Segfault pc=",self.programcounter," code length=",top)
+        raise Exception("Segfault ac="+str(self.accumulator)+" pc="+str(self.programcounter)+" top="+str(top))
 
 def value(arg):
     sign = arg[0]
@@ -62,8 +67,10 @@ def solve(qpart, filename='input.txt'):
         script.append((cmd,value(arg)))
 
     cpu = Cpu()
-    ret = cpu.run(script)
-    print("terminated. final acc value is: ", cpu.accumulator)
+    try:
+        ret = cpu.run(script)
+    except Exception as error:
+        print("terminated(",str(error),"). final acc value is: ", cpu.accumulator)
 
 if __name__ == '__main__':
     solve(1)
