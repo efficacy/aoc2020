@@ -16,12 +16,14 @@ def find_sublist(n, numbers):
                 return ret
         rets.append([a])
     print("None found :(")
+    return None
 
 def solve(qpart, filename='input.txt', size=25):
     print("Part " + str(qpart))
     with open(filename, 'r') as f:
         lines = f.readlines()
-    numbers = list(map(int, lines))
+    numbers = [int(line) for line in lines]
+    # numbers = list(map(int, lines))
 
     window = []
     for i in range(0,size):
