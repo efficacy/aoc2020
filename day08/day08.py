@@ -104,5 +104,5 @@ def solve(qpart, filename='input.txt'):
     print("tried all of them :(")
 
 if __name__ == '__main__':
-    # solve(1)
+    solve(1)
     solve(2)
