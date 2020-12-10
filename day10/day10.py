@@ -20,6 +20,7 @@ def find(sequence, input, available):
                 return ret
     return None
 
+# the "lazy caterer' sequence a.k.a central polynomial numbers: 1,2,4,7,11,....
 def caterer(n):
     return int((n * (n+1)/2) + 1)
 
@@ -57,6 +58,8 @@ def solve(qpart, filename='input.txt', size=25):
         blocks = []
         block = []
         prev = 0
+
+        # loop through finding contiguous blocks separated by two spaces
         for i in available:
             # print("considering:",i,"prev:",prev)
             if (i - prev) == 3:
@@ -71,6 +74,7 @@ def solve(qpart, filename='input.txt', size=25):
             blocks.append(block)
         # print(blocks)
 
+        # the result is the product of the possible routes through each block
         ret = 1
         for b in blocks:
             value = caterer(len(b)-1)

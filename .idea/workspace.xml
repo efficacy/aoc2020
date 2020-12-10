@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="day 9 minor tidyups">
-      <change afterPath="$PROJECT_DIR$/day10/day10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10/test1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day10/test2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day10/day10.py" beforeDir="false" afterPath="$PROJECT_DIR$/day10/day10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607513865862</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="day 10 complete&#10;&#10;Phew! Toughest one yet">
+      <created>1607603713376</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1607603713376</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -315,7 +318,8 @@
     <MESSAGE value="day 8 slight tidyup" />
     <MESSAGE value="day 9 complete" />
     <MESSAGE value="day 9 minor tidyups" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 9 minor tidyups" />
+    <MESSAGE value="day 10 complete&#10;&#10;Phew! Toughest one yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 10 complete&#10;&#10;Phew! Toughest one yet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="117" width="1200" height="800" key="DiffContextDialog" timestamp="1607602295278">
@@ -326,22 +330,22 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="870" y="372" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1607262141256" />
-    <state width="1362" height="278" key="GridCell.Tab.0.bottom" timestamp="1607603543997">
+    <state width="1362" height="278" key="GridCell.Tab.0.bottom" timestamp="1607603667548">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607603543997" />
-    <state width="1362" height="278" key="GridCell.Tab.0.center" timestamp="1607603543995">
+    <state width="1362" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607603667548" />
+    <state width="1362" height="278" key="GridCell.Tab.0.center" timestamp="1607603667548">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="278" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607603543995" />
-    <state width="1362" height="278" key="GridCell.Tab.0.left" timestamp="1607603543995">
+    <state width="1362" height="278" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607603667548" />
+    <state width="1362" height="278" key="GridCell.Tab.0.left" timestamp="1607603667548">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="278" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607603543995" />
-    <state width="1362" height="278" key="GridCell.Tab.0.right" timestamp="1607603543996">
+    <state width="1362" height="278" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607603667548" />
+    <state width="1362" height="278" key="GridCell.Tab.0.right" timestamp="1607603667548">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1362" height="278" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607603543996" />
+    <state width="1362" height="278" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607603667548" />
     <state x="837" y="315" key="RollbackChangesDialog" timestamp="1607426770701">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
