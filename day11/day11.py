@@ -18,16 +18,19 @@ class SeatMap:
     def set(self, r, c, v):
         self.data[r][c] = v
 
+    def complete(self):
+        for row in self.data:
+            for i in range(0,len(row)):
+                v = row[i]
+                if v == 'v':
+                    row[i] = '#'
+                if v == '^':
+                    row[i] = 'L'
     def dump(self, label=None):
         if (label):
             print(label)
         for row in self.data:
             print(''.join(row))
-
-class Model:
-    def __init__(self, seatmap, seats):
-        self.seatmap = SeatMap(data)
-
 
 class Seat:
     def __init__(self, r, c):
@@ -36,7 +39,8 @@ class Seat:
         self.c = c
 
     def is_occupied(self, seatmap):
-        return seatmap.get(self.r, self.c) == '#'
+        v = seatmap.get(self.r, self.c)
+        return v == '#' or v == '^'
 
     def is_adjacent(self, r, c):
         if self.r == r and self.c == c:
@@ -52,11 +56,11 @@ class Seat:
 
     def occupy(self, seatmap):
         # print("occupy",self.r,self.c)
-        seatmap.set(self.r, self.c, '#')
+        seatmap.set(self.r, self.c, 'v') # v => sitting down
 
     def vacate(self, seatmap):
         # print("vacate",self.r,self.c)
-        seatmap.set(self.r, self.c, 'L')
+        seatmap.set(self.r, self.c, '^') # ^ => getting up
 
     def __str__(self):
         return "(" + str(self.r) + "," + str(self.c) + ")"
@@ -65,21 +69,20 @@ def list_neighbours(seats, r,c):
     return [seat for seat in seats if seat.is_adjacent(r,c)]
 
 def generation(seatmap, seats):
-    newmap = seatmap.clone()
     changed = False
     for seat in seats:
         occupied = seat.is_occupied(seatmap)
         n = seat.count_neighbours(seatmap, seats)
         # print("considering:",seat.r,seat.c,"occ:",occupied,"n:",n)
         if not occupied and n == 0:
-            seat.occupy(newmap)
+            seat.occupy(seatmap)
             changed = True
         elif occupied and n >= 4:
-            seat.vacate(newmap)
+            seat.vacate(seatmap)
             changed = True
     if changed:
-        return newmap
-    return None
+        seatmap.complete()
+    return changed
 
 def solve(qpart, filename='input.txt', size=25):
     print("Part " + str(qpart))
@@ -102,15 +105,11 @@ def solve(qpart, filename='input.txt', size=25):
     #     print(seat)
 
     seatmap.dump("initial")
-    next = seatmap
     step = 0
-    while next != None:
-        next = generation(seatmap, seats)
+    while generation(seatmap, seats):
         step += 1
-        if (next != None):
-            seatmap = next
-            print(".",end='')
-            # seatmap.dump("step " + str(step))
+        print(".",end='')
+        # seatmap.dump("step " + str(step))
 
     occupied = 0
     for seat in seats:
