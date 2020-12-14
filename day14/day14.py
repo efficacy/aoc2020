@@ -8,15 +8,15 @@ def invert(x):
     return MAX - x
 
 def double(values, bit):
-    print("double:",values,bit)
+    # print("double:",values,bit)
     ret = []
     for value in values:
-        print("considering:",value)
+        # print("considering:",value)
         zero = value & invert(bit)
         one = zero | bit
         ret.append(zero)
         ret.append(one)
-        print("appended:",ret)
+        # print("appended:",ret)
     return ret
 
 class Cpu:
@@ -55,16 +55,16 @@ class Cpu:
 
     def apply_mask2(self, value):
         floaters = invert(self.enable)
-        print("apply mask 2 e:",format(self.enable,'b'),"f:",format(floaters,'b'),"v:",self.value,"i",value)
+        # print("apply mask 2 e:",format(self.enable,'b'),"f:",format(floaters,'b'),"v:",self.value,"i",value)
         base = self.value | value
         ret = [base]
         for i in range(BITS):
             bit = int(math.pow(2,i))
             if (floaters & bit):
                 ret = double(ret, bit)
-                print("after double:", ret)
+                # print("after double:", ret)
                 # raise(Exception("huh"))
-        print("apply mask 2 e:",self.enable,"v:",self.value,"->",ret)
+        # print("apply mask 2 e:",self.enable,"v:",self.value,"->",ret)
         return ret
 
     def put(self, addr, value):
