@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="still tweaking with 11.2">
-      <change afterPath="$PROJECT_DIR$/day14/day14.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day14/test1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aoc2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aoc2020.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="day 14 part 1 done">
+      <change afterPath="$PROJECT_DIR$/day14/test2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14/test3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day14/day14.py" beforeDir="false" afterPath="$PROJECT_DIR$/day14/day14.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607884910013</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="day 14 part 1 done">
+      <created>1607948047121</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1607948047121</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -356,7 +361,8 @@
     <MESSAGE value="day 11 working but slow" />
     <MESSAGE value="day 11 slightly faster" />
     <MESSAGE value="still tweaking with 11.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="still tweaking with 11.2" />
+    <MESSAGE value="day 14 part 1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 14 part 1 done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="117" width="1200" height="800" key="DiffContextDialog" timestamp="1607602295278">
@@ -367,22 +373,22 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="870" y="372" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1607262141256" />
-    <state width="1431" height="289" key="GridCell.Tab.0.bottom" timestamp="1607947849746">
+    <state width="1431" height="289" key="GridCell.Tab.0.bottom" timestamp="1607978260696">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1431" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
-    <state width="1431" height="289" key="GridCell.Tab.0.center" timestamp="1607947849746">
+    <state width="1431" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607978260696" />
+    <state width="1431" height="289" key="GridCell.Tab.0.center" timestamp="1607978260696">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1431" height="289" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
-    <state width="1431" height="289" key="GridCell.Tab.0.left" timestamp="1607947849746">
+    <state width="1431" height="289" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607978260696" />
+    <state width="1431" height="289" key="GridCell.Tab.0.left" timestamp="1607978260696">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1431" height="289" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
-    <state width="1431" height="289" key="GridCell.Tab.0.right" timestamp="1607947849746">
+    <state width="1431" height="289" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607978260696" />
+    <state width="1431" height="289" key="GridCell.Tab.0.right" timestamp="1607978260696">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1431" height="289" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
+    <state width="1431" height="289" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607978260696" />
     <state x="566" y="284" key="IDE.errors.dialog" timestamp="1607687263462">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -391,10 +397,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="837" y="315" key="RollbackChangesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1607426770701" />
-    <state x="680" y="363" key="Vcs.Push.Dialog.v2" timestamp="1607884913726">
+    <state x="680" y="363" key="Vcs.Push.Dialog.v2" timestamp="1607948728868">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="680" y="363" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1607884913726" />
+    <state x="680" y="363" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1607948728868" />
     <state x="541" y="117" width="1200" height="800" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1607602295278">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
