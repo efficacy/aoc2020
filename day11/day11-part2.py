@@ -102,8 +102,6 @@ def manhattan(seat1, seat2):
 width = 0
 height = 0
 
-def dump(seats):
-
 def solve(qpart, filename='input.txt', size=25):
     print("Part " + str(qpart))
     with open(filename, 'r') as f:
