@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="day 11 slightly faster">
-      <change afterPath="$PROJECT_DIR$/day11/day11-part2.py" afterDir="false" />
+    <list default="true" id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="still tweaking with 11.2">
+      <change afterPath="$PROJECT_DIR$/day14/day14.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day14/test1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/aoc2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aoc2020.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -44,16 +46,14 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day11" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day05" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Frank\eclipse-workspace\aoc2020\day11" />
       <recent name="C:\Users\Frank\eclipse-workspaces\aoc2020\day05" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.day11-part2">
+  <component name="RunManager" selected="Python.day14">
     <configuration name="day09" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="aoc2020" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,27 +88,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day10/day10.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="day11-part2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aoc2020" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day11" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day11/day11-part2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,20 +138,38 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="day14" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="aoc2020" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day14" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/day14/day14.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.day11-part2" />
-        <item itemvalue="Python.day12" />
+        <item itemvalue="Python.day14" />
         <item itemvalue="Python.day11" />
+        <item itemvalue="Python.day12" />
         <item itemvalue="Python.day10" />
         <item itemvalue="Python.day09" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\Frank\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="49666f0c-e5f5-4fda-976d-76847b3463fa" name="Default Changelist" comment="" />
@@ -314,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607687289786</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="still tweaking with 11.2">
+      <created>1607884910013</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1607884910013</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -351,7 +355,8 @@
     <MESSAGE value="day 10 minor tidyups and comments" />
     <MESSAGE value="day 11 working but slow" />
     <MESSAGE value="day 11 slightly faster" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 11 slightly faster" />
+    <MESSAGE value="still tweaking with 11.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="still tweaking with 11.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="117" width="1200" height="800" key="DiffContextDialog" timestamp="1607602295278">
@@ -362,26 +367,22 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="870" y="372" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1607262141256" />
-    <state width="1364" height="195" key="GridCell.Tab.0.bottom" timestamp="1607815579518">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1431" height="289" key="GridCell.Tab.0.bottom" timestamp="1607947849746">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1364" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607815579518" />
-    <state width="1174" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607791825038" />
-    <state width="1364" height="195" key="GridCell.Tab.0.center" timestamp="1607815579517">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1431" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
+    <state width="1431" height="289" key="GridCell.Tab.0.center" timestamp="1607947849746">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1364" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607815579517" />
-    <state width="1174" height="289" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607791825038" />
-    <state width="1364" height="195" key="GridCell.Tab.0.left" timestamp="1607815579517">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1431" height="289" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
+    <state width="1431" height="289" key="GridCell.Tab.0.left" timestamp="1607947849746">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1364" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607815579517" />
-    <state width="1174" height="289" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607791825038" />
-    <state width="1364" height="195" key="GridCell.Tab.0.right" timestamp="1607815579517">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1431" height="289" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
+    <state width="1431" height="289" key="GridCell.Tab.0.right" timestamp="1607947849746">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state width="1364" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607815579517" />
-    <state width="1174" height="289" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607791825038" />
+    <state width="1431" height="289" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1607947849746" />
     <state x="566" y="284" key="IDE.errors.dialog" timestamp="1607687263462">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -390,14 +391,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="837" y="315" key="RollbackChangesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1607426770701" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1607802718349">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607802718349" />
-    <state x="680" y="363" key="Vcs.Push.Dialog.v2" timestamp="1607513870872">
+    <state x="680" y="363" key="Vcs.Push.Dialog.v2" timestamp="1607884913726">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="680" y="363" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1607513870872" />
+    <state x="680" y="363" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1607884913726" />
     <state x="541" y="117" width="1200" height="800" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1607602295278">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
@@ -406,5 +403,9 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="483" y="229" width="1200" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1607472979640" />
+    <state x="878" y="512" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607942197302">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="878" y="512" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1160@0.0.1920.1160" timestamp="1607942197302" />
   </component>
 </project>
