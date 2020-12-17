@@ -113,7 +113,7 @@ def find_directional_neighbours(seat, seats):
         print("trying to unpack",entry)
         dist,seat = entry
         if dist != None:
-            seat.nb.append(seat)
+            seat.nb3d.append(seat)
     return ret
 
 global height
