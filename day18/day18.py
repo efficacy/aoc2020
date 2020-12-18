@@ -2,9 +2,11 @@ from enum import Enum
 
 class State(Enum):
     NUM1 = 0
-    NUM2 = 1
+    OP = 1
+    NUM2 = 2
 
 def calculate(op, n1, n2, indent):
+    print(indent,"calculate(",op,n1,n2,")",end='')
     ret = 0
     if op == '+':
         ret = n1 + n2
@@ -12,73 +14,70 @@ def calculate(op, n1, n2, indent):
         ret = n1 * n2
     else:
         raise (Exception("huh? unexpected operation", op))
-    print(indent,"calculate(",op,n1,n2,") ->",ret)
+    print(" ->",ret)
     return ret
 
-def evaluate(input, indent):
+def evaluate(qpart, input, indent):
     total = 0
     state = State.NUM1
-    n1 = 0
-    op = '+'
-    n2 = 0
-    buf = 0
+    acc = 0
+    op = None
 
-    c = ' '
-    while c != None:
-        c = next(input, None)
-        while c != None and c.isspace():
-            c = next(input, None)
-        # print(indent,"raw c",c)
-        if c == None:
+    token = ' '
+    while token != None:
+        token = next(input, None)
+        # print(indent,"raw t",token)
+        if token == None:
             break
-        print(indent,"state",state,"c",c,"n1",n1,"op",op,"n2",n2)
+        # print(indent,"state",state,"token",token,"acc",acc,"op",op)
         if state == State.NUM1:
-            if c == '(':
-                buf = evaluate(input, indent)
-            elif c == ')':
-                ret = n1
-                print(indent, "returning", ret)
-                return ret
-            elif c.isdigit():
-                buf *= 10
-                buf += int(c)
-            elif c == '+' or c == '*':
-                op = c
-                n1 = buf
-                buf = 0
+            if token == '(':
+                acc = evaluate(qpart, input, indent)
+                state = State.OP
+            elif token == ')':
+                print(indent, "returning", acc)
+                return acc
+            else:
+                acc = token
+                state = State.OP
+        elif state == State.OP:
+            if token == '+' or token == '*':
+                op = token
                 state = State.NUM2
-            else:
-                raise(Exception("huh? unexpected character",c,"at state",state))
+            elif token == ')':
+                print(indent, "returning", acc)
+                return acc
         elif state == State.NUM2:
-            if c == '(':
-                buf = evaluate(input,indent+' ')
-            elif c == ')':
-                ret = calculate(op, n1, buf,indent)
-                print(indent, "returning", ret)
-                return ret
-            elif c.isdigit():
-                buf *= 10
-                buf += int(c)
-            elif c == '+' or c == '*':
-                n2 = buf
-                n1 = calculate(op, n1, n2, indent)
-                op = c
-                n2 = 0
-                buf = 0
+            if token == '(':
+                acc = calculate(op, acc,  evaluate(qpart, input,indent+' '), indent)
+                op = None
+                state = State.OP
+            elif token == ')':
+                acc = calculate(op, acc, token, indent)
+                print(indent, "returning", acc)
+                return acc
             else:
-                raise(Exception("huh? unexpected character",c,"at state",state))
+                acc = calculate(op, acc, token, indent)
+                state = State.OP
 
-    print(indent,"at end state:",state,"c",c,"n1",n1,"op",op,"n2",n2)
-    if state == State.NUM1:
-        ret = n1
-    elif state == State.NUM2:
-        ret = calculate(op, n1, buf,indent)
-    print(indent,"returning",ret)
-    return ret
+    # print(indent,"at end state:",state,"c",token,"acc",acc,"op",op)
+    # print(indent,"returning",acc)
+    return acc
 
-def process(line):
-    input = (c for c in line)
-    return evaluate(input,'')
+def next_token(line):
+    buf = 0
+    pushback = None
+    for c in line:
+        if c.isdigit():
+            buf = (buf * 10) + int(c)
+        else:
+            if buf > 0:
+                yield buf
+                buf = 0
+            if c != ' ':
+                yield c
+    if buf > 0:
+        yield buf
 
 def solve(qpart, filename='input.txt', gens=6):
     print("Part " + str(qpart))
@@ -88,7 +87,9 @@ def solve(qpart, filename='input.txt', gens=6):
     result = 0
     for line in lines:
         line = line.strip()
-        answer = process(line)
+        input = next_token(line)
+        print("in",input)
+        answer = evaluate(qpart, input, '')
         print("line value:",answer)
         result += answer
     return result
@@ -96,11 +97,14 @@ def solve(qpart, filename='input.txt', gens=6):
 if __name__ == '__main__':
     # answer = solve(1, "test1.txt")
     # answer = solve(1, "test2.txt")
-    # answer = solve(1, "test3.txt")
+    answer = solve(1, "test3.txt")
     # answer = solve(1, "test4.txt")
-    answer = solve(1)
-    print("answer:", answer)
+    # answer = solve(1)
+    # print("answer:", answer)
 
     # answer = solve(2, "test1.txt")
+    # answer = solve(2, "test2.txt")
+    # answer = solve(2, "test3.txt")
+    # answer = solve(2, "test4.txt")
     # answer = solve(2)
-    # print("answer:", answer)
+    print("answer:", answer)
