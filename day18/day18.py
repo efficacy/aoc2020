@@ -66,7 +66,6 @@ def evaluate(qpart, input, indent):
 
 def next_token(line):
     buf = 0
-    pushback = None
     for c in line:
         if c.isdigit():
             buf = (buf * 10) + int(c)
